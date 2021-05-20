@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sanberappflutter/Tugas/Tugas12/Telegram.dart';
 import 'package:sanberappflutter/Tugas/Tugas13/HomeScreen.dart';
 import 'package:sanberappflutter/Tugas/Tugas13/LoginScreen.dart';
+import 'package:sanberappflutter/Tugas/Tugas14/Get_data.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,11 +13,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Travel App',
+      title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomeScreen(),
+      home: GetDataApi(),
       debugShowCheckedModeBanner: false,
     );
   }
