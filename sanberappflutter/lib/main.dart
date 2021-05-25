@@ -1,15 +1,11 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:sanberappflutter/Quiz3/HomeScreen.dart';
-import 'package:sanberappflutter/Quiz3/LoginScreen.dart';
-import 'package:sanberappflutter/Quiz3/MainApp.dart';
-// import 'package:sanberappflutter/Tugas/Tugas12/Telegram.dart';
-// import 'package:sanberappflutter/Tugas/Tugas13/HomeScreen.dart';
-// import 'package:sanberappflutter/Tugas/Tugas13/LoginScreen.dart';
-// import 'package:sanberappflutter/Tugas/Tugas14/Get_data.dart';
-// import 'package:sanberappflutter/Tugas/Tugas15/Dashboard.dart';
-// import 'package:sanberappflutter/Tugas/Tugas15/Login.dart';
+import 'package:sanberappflutter/Latihan/Authentication/HomeScreen.dart';
+import 'package:sanberappflutter/Latihan/Authentication/LoginScreen.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
@@ -18,16 +14,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      title: 'Travel App',
-      initialRoute: '/',
-      routes: <String, WidgetBuilder>{
-        '/': (context) => LoginScreen(),
-        '/main': (context) => MainApp(),
-      },
+      home: HomeScreen(),
+      // initialRoute: '/',
+      // routes: <String, WidgetBuilder>{
+      //   '/': (context) => LoginScreen(),
+      //   '/main': (context) => MainApp(),
+      // },
     );
   }
 }
