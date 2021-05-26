@@ -71,9 +71,13 @@ class _LoginScreenState extends State<LoginScreen> {
                   style: raisedButtonStyle,
                   child: Text("Login"),
                   onPressed: () async {
-                    await _firebaseAuth
-                        .signInWithEmailAndPassword(email: _emailController.text, password: _passwordController.text)
-                        .then((value) => Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => HomeScreen())));
+                    await _firebaseAuth.signInWithEmailAndPassword(email: _emailController.text, password: _passwordController.text).then(
+                          (value) => Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(
+                              builder: (context) => HomeScreen(),
+                            ),
+                          ),
+                        );
                   },
                 )),
           ],

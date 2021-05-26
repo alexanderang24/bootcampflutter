@@ -2,6 +2,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:sanberappflutter/Latihan/Authentication/HomeScreen.dart';
 import 'package:sanberappflutter/Latihan/Authentication/LoginScreen.dart';
+import 'package:sanberappflutter/Latihan/StateManagement/Bloc/main_app.dart';
+import 'package:sanberappflutter/Latihan/StateManagement/local_counter.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomeScreen(),
+      home: LocalCounter(),
       // initialRoute: '/',
       // routes: <String, WidgetBuilder>{
       //   '/': (context) => LoginScreen(),
